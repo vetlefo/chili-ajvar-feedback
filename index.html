@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tilbakemelding på Chili Ajvar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Tilbakemelding på Chili Ajvar</h1>
+            <p>Takk for at du prøver vårt samarbeid mellom Vestland Chili og Den Bosniske Nomaden. Din tilbakemelding er verdifull for oss!</p>
+        </header>
+        
+        <form id="feedbackForm" action="submit.php" method="POST">
+            <div class="form-group">
+                <label for="initialImpression">Hva var ditt første inntrykk av chili ajvaren?</label>
+                <textarea id="initialImpression" name="initialImpression" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="heatLevel">Hvordan vil du rangere styrkenivået?</label>
+                <div class="rating">
+                    <input type="radio" id="heat1" name="heatLevel" value="1" required>
+                    <label for="heat1">1 - Mild</label>
+                    <input type="radio" id="heat2" name="heatLevel" value="2">
+                    <label for="heat2">2</label>
+                    <input type="radio" id="heat3" name="heatLevel" value="3">
+                    <label for="heat3">3</label>
+                    <input type="radio" id="heat4" name="heatLevel" value="4">
+                    <label for="heat4">4</label>
+                    <input type="radio" id="heat5" name="heatLevel" value="5">
+                    <label for="heat5">5 - Veldig sterk</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="balance">Hvordan opplever du balansen mellom tradisjonell ajvar og chili?</label>
+                <select id="balance" name="balance" required>
+                    <option value="">Vennligst velg...</option>
+                    <option value="too_much_ajvar">For mye ajvar-smak</option>
+                    <option value="perfect_balance">Perfekt balanse</option>
+                    <option value="too_much_chili">For mye chili-smak</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="texture">Hvordan vil du beskrive konsistensen?</label>
+                <textarea id="texture" name="texture" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="pairings">Hvilken mat har du spist den til? Hva fungerte best?</label>
+                <textarea id="pairings" name="pairings" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="overall">Total vurdering:</label>
+                <div class="rating">
+                    <input type="radio" id="rating1" name="overall" value="1" required>
+                    <label for="rating1">1</label>
+                    <input type="radio" id="rating2" name="overall" value="2">
+                    <label for="rating2">2</label>
+                    <input type="radio" id="rating3" name="overall" value="3">
+                    <label for="rating3">3</label>
+                    <input type="radio" id="rating4" name="overall" value="4">
+                    <label for="rating4">4</label>
+                    <input type="radio" id="rating5" name="overall" value="5">
+                    <label for="rating5">5</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="suggestions">Har du forslag til forbedringer?</label>
+                <textarea id="suggestions" name="suggestions" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="email">E-post (valgfritt):</label>
+                <input type="email" id="email" name="email">
+                <small>Om du ønsker å bli varslet når produktet lanseres</small>
+            </div>
+
+            <button type="submit">Send tilbakemelding</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
